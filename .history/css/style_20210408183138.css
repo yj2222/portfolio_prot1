@@ -1,0 +1,611 @@
+@charset "UTF-8";
+/* reset
+------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: bottom;
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+/* common
+------------------------------------ */
+:root{
+    --accent-color: #ff6b83;
+}
+body{
+    background: #333;
+    overflow-x: hidden;
+}
+/* loading
+------------------------------------ */
+@keyframes loading{
+    0%{opacity: 1;}
+    50%{opacity: 1;}
+    99%{opacity: 0;}
+    100%{opacity: 0; display: none;}
+}
+.loading{
+    background: black;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    /* animation: loading 3s; */
+    animation-fill-mode: forwards;
+}
+.loading__ciecle{
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+.loading p{
+    color: white;
+}
+/* header
+------------------------------------ */
+.homeHed{
+    text-align: center;
+    padding: 20px 0;
+    /* margin-bottom: 100px; */
+}
+@keyframes textSlideIn{
+    0%{
+        transform: translateX(-300%) rotate(0);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0) rotate(1080deg);
+    }
+}
+h1 span{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+}
+h1 span.active{
+    animation: 1s textSlideIn ease-out;
+    animation-fill-mode: forwards;
+}
+/* animation
+---------------------------------------- */
+/* 下からフェードインするアニメーション */
+@keyframes bottomIn{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 左から右に引いたかのようなアニメーション */
+@keyframes extendW{
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+/* profile
+---------------------------------------- */
+.prof{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 1%;
+}
+.prof__ttl{
+    width: 100%;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.prof__ttl span{
+    font-size: 70px;
+    font-weight: 100;
+    opacity: 0;
+    display: inline-block;
+    color: white;
+}
+/* JSでactiveが付与された時のアニメーション */
+.prof__ttl.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.prof__pic{
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    position: relative;
+}
+.prof__pic img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    object-fit: cover;
+    opacity: 0;
+}
+/* JSでactiveが付与された時のアニメーション */
+.prof__pic.active img{
+    animation: 2s extendW;
+    animation-fill-mode: forwards;
+}
+.prof__grf{
+    width: 68%;
+}
+.prof__grf figcaption{
+    opacity: 0;
+}
+/* JSでactiveが付与された時のアニメーション */
+.prof__grf.active figcaption{
+    animation: 2s extendW;
+    animation-fill-mode: forwards;
+}
+.prof__grf figcaption p{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em;
+    background: white;
+}
+.prof__grf figcaption p:not(:last-of-type){
+    margin-bottom: 20px;
+}
+.prof__grf figcaption p:nth-of-type(2){
+    width: 90%;
+}
+.prof__grf figcaption p:nth-of-type(3){
+    width: 80%;
+}
+.prof__grf figcaption p:nth-of-type(4){
+    width: 70%;
+}
+.prof__grf figcaption p span{
+    display: block;
+    line-height: 60px;
+}
+/* profile skill rate 
+----------------------------------------*/
+.prof__rate{
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.prof__rate p{
+    border-bottom: 1px solid white;
+    width: 150px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.prof__rate p span{
+    color: white;
+    font-size: 100px;
+}
+
+/* client works WV
+--------------------------------------- */
+.cw__cl{
+    padding: 100px 1%;
+}
+/* client works WV title
+--------------------------------------- */
+.cw__cl__ttl{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+.cw__cl__ttl p{
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    position: relative;
+}
+.cw__cl__ttl p img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 50%;
+}
+.cw__cl__ttl p img:last-of-type{
+    padding: 30px;
+}
+.cw__cl__ttl h3{
+    overflow: hidden;
+}
+.cw__cl__ttl h3.active span{
+    display: block;
+    font-weight: 100;
+    font-size: 70px;
+    color: white;
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+/* client works WV mock
+---------------------------------- */
+.cw__cl__mock{
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.cw__cl__mock p{
+    display: flex;
+    margin: 0 auto;
+    width: 40%;
+    padding-bottom: 30%;
+    position: relative;
+}
+.cw__cl__mock p img{
+    object-fit: cover;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+.cw__cl__mock p img.active{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.cw__cl__mock p img:nth-of-type(1){
+    width: 100%;
+    margin: auto;
+}
+.cw__cl__mock p img:nth-of-type(2){
+    width: 70%;
+    margin: auto auto 0 -50%;
+}
+.cw__cl__mock p img:nth-of-type(3){
+    width: 80%;
+    margin: auto -50% 0 auto;
+}
+/* client works WV desc
+-------------------------------------------- */
+.cw__cl__desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+.cw__cl__desc__txt{
+    max-width: 600px;
+}
+.cw__cl__desc__txt p{
+    overflow: hidden;
+}
+.cw__cl__desc__txt p:first-of-type{
+    margin-bottom: 20px;
+    font-size: 70px;
+}
+.cw__cl__desc__txt p:last-of-type{
+    font-size: 16px;
+}
+.cw__cl__desc__txt p span{
+    display: block;
+    color: white;
+}
+.cw__cl__desc__txt p:first-of-type span{
+    line-height: 1.1;
+}
+.cw__cl__desc__txt p:last-of-type span{
+    line-height: 1.5;
+}
+.cw__cl__desc__txt.active p span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.cw__cl__desc a{
+    display: block;
+    position: relative;
+}
+.cw__cl__desc a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: pink;
+    position: absolute;
+    bottom: 0;
+    transform-origin: left top;
+    transform: scaleX(0);
+    transition: .3s;
+}
+.cw__cl__desc a span{
+    display: block;
+    width: 300px;
+    height: 50px;
+    color: white;
+    border-bottom: 1px solid white;
+    transition: .3s;
+}
+.cw__cl__desc a span:hover{
+    color: pink;
+}
+.cw__cl__desc a:hover::after{
+    transform: scaleX(1);
+}
+.cw__cl__desc a.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+/* client works WV banner
+--------------------------------------- */
+.cw__cl__bnr__ttl{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+.cw__cl__bnr__ttl p{
+    width: 30%;
+    height: 0;
+    padding-bottom: 30%;
+    position: relative;
+}
+.cw__cl__bnr__ttl p img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 50%;
+}
+.cw__cl__bnr__ttl p img:last-of-type{
+    padding: 30px;
+}
+.cw__cl__bnr__ttl h4{
+    overflow: hidden;
+}
+.cw__cl__bnr__ttl h4 span{
+    display: block;
+    color: white;
+    font-weight: 100;
+    font-size: 70px;
+}
+.cw__cl__bnr__ttl h4.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+/* client works WV mock
+-------------------------------------- */
+.cw__cl__bnr__img{
+    padding: 200px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+.cw__cl__bnr__img figure{
+    position: relative;
+}
+.cw__cl__bnr__img figure > p > img{
+}
+.cw__cl__bnr__img figure figcaption p{
+    position: absolute;
+    overflow: hidden;
+}
+.cw__cl__bnr__img figure figcaption p:nth-of-type(1){
+    top: -200px; left: 0;
+}
+.cw__cl__bnr__img figure figcaption p:nth-of-type(2){
+    top: -200px; right: 0;
+}
+.cw__cl__bnr__img figure figcaption p:nth-of-type(3){
+    bottom: -200px; right: 0;
+}
+.cw__cl__bnr__img figure figcaption p span{
+    display: block;
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.cw__cl__bnr__img figure figcaption p.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.cw__cl__bnr__img figure figcaption svg{
+    position: absolute;
+}
+.cw__cl__bnr__img figure figcaption svg:nth-of-type(1){
+    top: -130px; left: 50px;
+}
+.cw__cl__bnr__img figure figcaption svg:nth-of-type(2){
+    top: -130px; right: 50px;
+}
+.cw__cl__bnr__img figure figcaption svg:nth-of-type(3){
+    bottom: -130px; right: 50px;
+    transform: rotate(180deg);
+}
+/* study works TTA
+------------------------------------------------ */
+.sw__art{
+    padding: 100px 1%;
+    display: flex;
+    justify-content: space-between;
+}
+.sw__art__item{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 1%;
+    width: 49.5%;
+    background: rgba(255, 255, 255, 0.1);
+}
+.sw__art__item h3{
+    overflow: hidden;
+}
+.sw__art__item h3 span{
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: .25em;
+    opacity: 0;
+}
+.sw__art__item h3.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.sw__art__item > p:first-of-type{
+    margin: 0 auto 50px;
+    width: 80%;
+    height: 0;
+    padding-bottom: 45%;
+    position: relative;
+}
+.sw__art__item > p:first-of-type img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    object-fit: cover;
+}
+.sw__art__item > p.active:first-of-type img{
+    animation: 2s extendW;
+    animation-fill-mode: forwards;
+}
+.sw__art__item > p:nth-of-type(2){
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.sw__art__item > p:nth-of-type(2) span{
+    display: block;
+    color: white;
+    line-height: 1.5;
+    font-size: 16px;
+    opacity: 0;
+}
+.sw__art__item > p.active:nth-of-type(2) span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.sw__art__item > a{
+    margin-top: auto;
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    border-bottom: 1px solid white;
+    position: relative;
+    overflow: hidden;
+}
+.sw__art__item > a::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: pink;
+    position: absolute;
+    bottom: 0;
+    transform-origin: left top;
+    transform: scaleX(0);
+    transition: .3s;
+}
+.sw__art__item > a span{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+    letter-spacing: .25em;
+    opacity: 0;
+    transition: .3s;
+}
+.sw__art__item > a.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.sw__art__item > a span:hover{
+    color: pink;
+}
+.sw__art__item > a:hover::after{
+    transform: scaleX(1);
+}
+.sw__art__item__bnr h4{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.sw__art__item__bnr h4 span{
+    display: block;
+    color: white;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: .25em;
+    opacity: 0;
+}
+.sw__art__item__bnr h4.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.sw__art__item__bnr__box{
+    overflow: hidden;
+    padding: 0 1%;
+}
+/* another works list
+------------------------------------- */
+.aw__list{
+    padding: 100px 1%;
+}
+.aw__list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.aw__list ul li{
+    padding: 50px 0;
+    width: calc(98% / 3);
+    background: rgba(255, 255, 255, 0.1);
+}
+.aw__list ul li a h3{
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+.aw__list ul li a h3 span{
+    display: block;
+    color: white;
+    font-size: 50px;
+    font-weight: 100;
+    letter-spacing: .25em;
+}
+.aw__list ul li a h3.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}
+.aw__list ul li a p{
+    text-align: center;
+    overflow: hidden;
+}
+.aw__list ul li a p span{
+    display: block;
+    color: white;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.aw__list ul li a p.active span{
+    animation: 2s bottomIn;
+    animation-fill-mode: forwards;
+}

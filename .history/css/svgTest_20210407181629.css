@@ -1,0 +1,21 @@
+svg{
+    width: 100px;
+}
+#paint, #frame{
+    fill: none;
+    stroke-dasharray: 7000;
+    stroke-dashoffset: 7000;
+    stroke-width: 1;
+    animation: hello 3s ease-in forwards;
+}
+#paint{
+    animation: hello 3s ease-in forwards 1s;
+}
+@keyframes DASH {
+    0% {
+        stroke-dashoffset: 4000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

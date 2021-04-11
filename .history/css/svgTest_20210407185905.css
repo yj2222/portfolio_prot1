@@ -1,0 +1,36 @@
+.arrow svg{
+    width: 100px;
+}
+.arrow .cls-1,.arrow .cls-2{
+    fill: none;
+    stroke: pink;
+    stroke-width: 10px;
+}
+.arrow .cls-1{
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.arrow .cls-2{
+    stroke-linecap: square;
+    stroke-linejoin: bevel;
+}
+@keyframes DASH{
+    0% {
+        stroke-dashoffset: 7000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+#paint, #frame{
+    stroke: #000; 
+    fill: none;
+    stroke-dasharray:  7000; 
+    stroke-dashoffset: 7000; 
+}
+#frame{
+    animation: DASH 7s linear forwards;
+}
+#paint{
+    animation: DASH 3s linear forwards 1s;
+}

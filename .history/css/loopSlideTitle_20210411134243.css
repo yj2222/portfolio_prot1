@@ -1,0 +1,36 @@
+@keyframes loopSlider{
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);}
+}
+.ls{
+    display: flex;
+    background: white;
+}
+.ls .ls__item{
+    display: flex;
+    animation: 20s loopSlider linear infinite;
+}
+.ls .ls__item span{
+    font-size: 50px;
+    /* color: white; */
+    margin: 0 .25em;
+}
+.ls ul.ls__item li{
+    margin: 0 10px;
+    transition: .3s;
+}
+.ls ul.ls__item li a{
+    display: block;
+    width: 300px;
+    height: 250px;
+    /* background: url(../img/sample.jpg) center/cover; */
+    transition: .3s;
+}
+/* スライダーホバー時のアクション */
+.ls:hover ul.ls__item{
+    animation-play-state: paused;
+}
+.ls ul.ls__item li:hover a{
+    margin-top: -10px;
+    box-shadow: 0 0 10px white;
+}

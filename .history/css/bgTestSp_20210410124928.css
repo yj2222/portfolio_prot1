@@ -1,0 +1,13 @@
+@media screen and (min-width: 769px){
+    .bgTest{
+        width: 100%;
+        height: 100vh;
+        background: #333;
+    }
+    .bgTest_in{
+        margin-left: auto;
+        width: 80%;
+        height: 100%;
+        position: relative;
+    }
+}

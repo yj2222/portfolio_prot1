@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* reset
+------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.0;
+    box-sizing: border-box;
+    color: #333;
+}
+ul{list-style: none;}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    vertical-align: bottom;
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+/* common
+------------------------------------ */
+:root{
+    --accent-color: #ff6b83;
+}
+body{
+    background: #333;
+}
+h2{
+
+}
+/* header
+------------------------------------ */
+.homeHed{
+    text-align: center;
+    padding: 100px 0;
+}
+@keyframes korokoroL{
+    0%{
+        opacity: 0;
+        transform: translateX(-300%) rotate(3600deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(300%) rotate(3600deg);
+    }
+}
+h1 span{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background: white;
+    border-radius: 50%;
+}

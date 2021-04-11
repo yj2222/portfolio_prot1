@@ -1,0 +1,24 @@
+svg{
+    width: 100px;
+}
+#frame{
+    stroke-dasharray: 7000;
+    animation: hello 3s ease-in forwards;
+}
+#paint{
+    stroke-dasharray: 7000;
+    animation: hello 3s ease-in forwards;
+}
+@keyframes hello {
+    0% {
+        /* stroke-dashoffset: 7000; */
+        fill:transparent; /*透過*/
+    }
+    50% {
+        fill:transparent; /*透過*/
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill:#333;
+    }
+}

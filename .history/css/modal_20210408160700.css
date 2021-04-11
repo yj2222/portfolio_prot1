@@ -1,0 +1,34 @@
+/* modal window */
+.modal{
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.modal__bg{
+    background: rgba(0,0,0,0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+.modal__content{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+}
+.modal__content p:first-of-type{
+    background: white;
+
+}
+.modal__content p:last-of-type{
+    text-align: right;
+}
+.modal__content p a{
+    color: white;
+    font-size: 16px;
+    line-height: 44px;
+}

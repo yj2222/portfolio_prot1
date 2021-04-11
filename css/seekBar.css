@@ -1,0 +1,70 @@
+@keyframes sbStart{
+    0%{}
+}
+.sb{
+    width: 100%;
+    height: 50px;
+    padding: 3px;
+    /* background: red; */
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+}
+.sb__pos{
+    width: 50px;
+    height: 100%;
+    background: url(../img/chara.png) right bottom/ contain no-repeat;
+    text-align: right;
+    /* animation: yurayura 3s ease-in-out infinite; */
+
+}
+@keyframes yurayura{
+    0%{transform: rotate(0);}
+    33%{transform: rotate(-10deg);}
+    66%{transform: rotate(10deg);}
+    100%{transform: rotate(0);}
+}
+.sb__pos img{
+    width: 50px;
+    /* animation: yurayura 3s ease-in-out infinite; */
+}
+.sb__bc{
+    display: flex;
+}
+@keyframes neon{
+    0%{text-shadow: 0 0 0 white;}
+    25%{text-shadow: 0 0 20px white;}
+    50%{text-shadow: 0 0 0 white;}
+    75%{text-shadow: 0 0 20px white;}
+    100%{text-shadow: 0 0 0 white;}
+}
+div[class^="sb__bc__item"]{
+    width: 100%;
+    /* height: 100%; */
+    color: white;
+    background: black;
+    font-size: 12px;
+    opacity: .5;
+    position: absolute;
+    top: 50px;
+}
+div[class^="sb__bc__item"].active{
+    opacity: 1;
+    animation: neon 1s infinite;
+}
+.sb__bc__item1{
+    /* background: red; */
+    left: 0%;
+}
+.sb__bc__item2{
+    /* background: blue; */
+    left: 17%;
+}
+.sb__bc__item3{
+    /* background: green; */
+    left: 63%;
+}
+.sb__bc__item4{
+    /* background: orange; */
+    left: 88%;
+}

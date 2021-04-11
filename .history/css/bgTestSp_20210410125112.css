@@ -1,0 +1,19 @@
+/* bg test */
+.bgTest{
+    width: 100%;
+    height: 100vh;
+    background: #333;
+}
+.bgTest_in{
+    margin-left: auto;
+    width: 80%;
+    height: 80%;
+    position: relative;
+}
+.bgTest_in img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+}

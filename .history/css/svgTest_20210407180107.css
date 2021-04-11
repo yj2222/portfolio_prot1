@@ -1,0 +1,22 @@
+#paint {
+    fill: none;
+    stroke: #333; /*線の色を指定する*/
+    stroke-dasharray: 4000;/*線の間隔を指定する*/
+    stroke-dashoffset: 0;/*線の位置を指定する(IEは効かない属性)*/
+    stroke-width: 1;/*線の太さを指定する*/
+    -webkit-animation: hello 3s ease-in forwards;
+    animation: hello 3s ease-in forwards;
+}
+@keyframes hello {
+    0% {
+        stroke-dashoffset: 4000;
+        fill:transparent; /*透過*/
+    }
+    50% {
+        fill:transparent; /*透過*/
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill:#333;
+    }
+}

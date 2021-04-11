@@ -1,0 +1,29 @@
+header{
+    
+}
+.bgTest{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+.bgTest__in{
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.bgTest__in .left,
+.bgTest__in .right{
+    object-fit: cover;
+    position: absolute;
+}
+.bgTest__in .left{
+    width: auto;
+    height: 100%;
+    top: 0; left: 20%;
+}
+.bgTest__in .right{
+    width: 80%;
+    height: 100%;
+    top: 0; right: 0;
+}

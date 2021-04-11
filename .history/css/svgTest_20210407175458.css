@@ -1,0 +1,38 @@
+svg{
+    width: 500px;
+}
+#frame{
+
+}
+#paint{
+
+}
+
+@keyframes text_line {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+   
+.mozart {
+stroke-dasharray: 500;
+stroke-dashoffset: 2000;
+stroke-width: 2;
+animation-name: mozart_line;
+animation-duration: 2.5s;
+animation-timing-function: ease-out;
+}
+
+.text {
+transform: translateY(-50px);
+animation-delay: 2.5s;
+opacity: 0;
+animation-fill-mode: forwards;
+animation-name: text_line;
+animation-duration: 2s;
+animation-timing-function: ease;
+}
