@@ -55,7 +55,9 @@ $(function(){
             });
             rateFlug = 1;
         }
+        // スクロール値が全体の何％か。
         let pos = Math.floor(scroll / bodyH * 100);
+        console.log(pos);
         if(pos > 5){
             $(".sb__gif").animate({width: `${pos}%`}, 10, 'swing');
         } else {
@@ -69,7 +71,7 @@ $(function(){
                 $(sbBc[i]).addClass('active');
             }
             // 各セクションが全体高さの％を占めているか調べるコード
-            // console.log(bc_pos / bodyH * 100);
+            // console.log(Math.floor(bc_pos / bodyH * 100));
         });
     });
 });
