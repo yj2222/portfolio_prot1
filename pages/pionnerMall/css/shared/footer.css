@@ -1,0 +1,53 @@
+/* scroll top
+---------------------------------------- */
+p.scl-top {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #365699;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #365699;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center; 
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.scl-top i {
+  color: #365699;
+  display: block;
+  margin-bottom: -5px;
+  font-size: 26px;
+}
+/* footer
+-------------------------------------------- */
+footer {
+ background: #365699;
+ padding: 20px 10px;
+ text-align: center;
+ font-size: 14px;
+}
+@media screen and (min-width: 768px){
+  footer {
+    padding: 30px 10px;
+  }
+}
+footer p:first-child{
+  display: none;
+}
+footer p:last-child{
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px){
+  footer p:first-child{
+    display: block;
+  }
+  footer p:last-child{
+    display: none;
+  }
+}
+footer small{
+ color: #fff;
+}

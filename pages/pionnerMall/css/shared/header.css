@@ -1,0 +1,168 @@
+/* header
+--------------------------------------------------- */
+header {
+ background: #365699;
+ padding: 20px 10px;
+ text-align: center;
+}
+@media screen and (min-width: 550px) {
+ header > .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+}
+h1 {
+ box-sizing: content-box;
+ padding-left: 30px;
+ background: url(../../img/logo.png) left/contain no-repeat;
+ line-height: 50px;
+ color: #fff;
+ font-size: 20px;
+ display: inline;
+}
+@media screen and (min-width: 550px) {
+ h1 {
+    padding-left: 50px;
+    margin: 0;
+ }
+}
+@media screen and (min-width: 768px) {
+ h1 {
+   font-size: 22px;
+ }
+}
+header p {
+ display: none;
+}
+@media screen and (min-width: 550px) {
+ header p {
+   display: block;
+   color: #fff;
+   font-size: 14px;
+   line-height: 1.5;
+ }
+}
+@media screen and (min-width: 768px) {
+ header p {
+   font-size: 16px;
+ }
+}
+/* navigation
+-------------------------------------------------- */
+.spbtn{
+ height: 70px;
+ text-align: center;
+ border: 2px solid #365699;
+ border-radius: 5px;
+ color: #365699;
+ font-size: 35px;
+ background: linear-gradient(#c0d4ff, #f3f7ff);
+}
+.spbtn i{
+ display: none;
+ line-height: 70px;
+ transition: .3s;
+}
+.spbtn i.active{
+ display: block;
+}
+@media screen and (min-width: 768px){
+ .spbtn{
+   display: none;
+ }
+}
+nav ul {
+ display: none;
+ position: absolute;
+ width: 100%;
+ background:rgba(54, 85, 153, 0.8);
+ z-index: 10000;
+}
+@media screen and (min-width: 768px) {
+ nav {
+   padding: 20px 10px;
+ }
+ nav ul {
+   background:transparent;
+   position: static;
+   display: flex;
+ }
+}
+@media screen and (min-width: 768px){
+ nav li {
+   margin-right: 20px;
+ }
+}
+nav a{
+ display: block;
+ line-height: 70px;
+ text-align: center;
+ border-bottom: 1px solid #aaa;
+ color: #fff;
+ font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+ nav a {
+   line-height: 1;
+   padding-bottom: 5px;
+   border: none;
+   border-bottom: 5px solid transparent;
+   color: #333;
+   font-weight: normal;
+   transition: 0.5s;
+ }
+ nav a.current {
+   border-bottom: 5px solid #f60;
+ }
+ nav a:hover {
+   color: #365699;
+   border-bottom: 5px solid #365699;
+ }
+}
+/* key visual
+---------------------------------------------------- */
+/* bxslider */
+ul.bxslider li{
+ padding: 30px 0;
+}
+@media screen and (min-width: 550px) {
+ ul.bxslider li{
+   padding: 50px 0;
+ }
+}
+@media screen and (min-width: 768px){
+ ul.bxslider li{
+   padding: 100px 0;
+ }
+}
+ul.bxslider li:first-child {
+ background: url(../../img/slider1.jpg) center/cover;
+}
+ul.bxslider li:nth-child(2) {
+ background: url(../../img/slider2.jpg) center/cover;
+}
+ul.bxslider li:nth-child(3) {
+ background: url(../../img/slider3.jpg) center/cover;
+}
+ul.bxslider p {
+ text-align: center;
+ font-size: 16px;
+ color: #fff;
+ line-height: 1.5;
+ text-shadow: 1px 1px 1px #000, 2px 2px 3px #c1ab05, 0 0 5px #c1ab05;
+}
+@media screen and (min-width: 550px){
+ ul.bxslider p {
+   font-size: 26px;
+ }
+}
+@media screen and (min-width: 768px){
+ ul.bxslider p {
+   font-size: 36px;
+ }
+}
+/* スライダーの枠線を消す */
+.bx-wrapper {
+ border: none;
+}

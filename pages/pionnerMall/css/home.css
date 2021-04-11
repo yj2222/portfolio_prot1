@@ -1,0 +1,57 @@
+/* main
+----------------------------------------------------- */
+main {
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  main .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+/* main section */
+main section {
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+@media screen and (min-width: 768px) {
+  main section {
+    margin-bottom: 0;
+    width: calc(33.3% - 10px);
+  }
+}
+main section:hover {
+  background: #fea;
+}
+h2 {
+  padding-left: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-left: 5px solid #f60;
+}
+main section img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 550px) {
+  main section img {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main section img {
+    height: 200px;
+  }
+}
+main section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+/* media query */
+@media screen and (min-width: 550px) and (max-width: 767px) {
+}
+@media screen and (min-width: 768px) {
+}
