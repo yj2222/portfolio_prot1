@@ -57,7 +57,7 @@ $(function(){
         }
         // スクロール値が全体の何％か。
         let pos = Math.floor(scroll / bodyH * 100);
-        console.log(pos);
+        // console.log(pos);
         if(pos > 5){
             $(".sb__gif").animate({width: `${pos}%`}, 10, 'swing');
         } else {
