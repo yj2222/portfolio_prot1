@@ -3,7 +3,7 @@ svg.arrow{
 }
 .arrow .cls-1,.arrow .cls-2{
     fill: none;
-    stroke: pink;
+    stroke: var(--accent-color);
     stroke-width: 10px;
 }
 .arrow .cls-1{

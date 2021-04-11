@@ -57,10 +57,10 @@ $(function(){
         }
         let pos = Math.floor(scroll / bodyH * 100);
         if(pos > 5){
-            $(".sb__pos").animate({width: `${pos}%`}, 10, 'swing');
+            $(".sb__gif").animate({width: `${pos}%`}, 10, 'swing');
         } else {
             $(sbBc).removeClass('active');
-            $(".sb__pos").animate({width: '50px'}, 10, 'swing');
+            $(".sb__gif").animate({width: '50px'}, 10, 'swing');
         }
         $.each(bcFlug, function (i, bc) { 
             let bc_pos = $(bc).offset().top - winH;
