@@ -57,13 +57,13 @@ $(function(){
         }
         // スクロール値が全体の何％か。
         let pos = Math.floor(scroll / bodyH * 100);
-        // console.log(pos);
-        if(pos > 5){
-            $(".sb__gif").animate({width: `${pos}%`}, 10, 'swing');
-        } else {
+        if(pos < 5) {
             $(sbBc).removeClass('active');
-            $(".sb__gif").animate({width: '50px'}, 10, 'swing');
-        }
+            $(".sb__gif").animate({width: '50px'}, 1, 'swing');
+        } else if(pos % 5 == 0){
+            console.log(pos);
+            $(".sb__gif").animate({width: `${pos}%`}, 1, 'swing');
+        }  
         $.each(bcFlug, function (i, bc) { 
             let bc_pos = $(bc).offset().top - winH;
             if(scroll > bc_pos){
@@ -75,20 +75,19 @@ $(function(){
         });
     });
 });
+// モーダルイベント
 $(function(){
     $('.jsModalOpen').each(function(){
-      $(this).click(function(){
-        let target = $(this).data('target');
-        $(target).fadeIn();
-        return false;
-      });
+        $(this).click(function(){
+            $('body').css('overflow', 'hidden');
+            let target = $(this).data('target');
+            $(target).fadeIn();
+            return false;
+        });
     });
     $('.jsModalClose').click(function(){
-      $('.jsModal').fadeOut();
+        $('body').css('overflow', 'visible');
+        $('.jsModal').fadeOut();
         return false;
     });
 });
-$(function(){
-
-});
-

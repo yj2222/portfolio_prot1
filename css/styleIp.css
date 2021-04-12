@@ -1,0 +1,59 @@
+@media screen and (max-width: 798px) {
+    h1{
+        font-size: 50px;
+    }
+    h1 span{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .prof__grf figcaption p span{
+        font-size: 16px;
+    }
+    .prof__rate p{
+        width: 110px;
+    }
+    .prof__rate p span{
+        font-size: 70px;
+    }
+    .cw__cl__ttl p{
+        width: 150px;
+        padding-bottom: 150px;
+    }
+    .cw__cl__ttl h3 span{
+        font-size: 50px;
+    }
+    .cw__cl__mock p{
+        width: 70%;
+        padding-bottom: 52.5%;
+    }
+    .cw__cl__desc{
+        display: block;
+        margin-bottom: 100px;
+    }
+    .cw__cl__desc__txt{
+        margin-bottom: 50px;
+    }
+    .cw__cl__desc a span{
+        margin-right: 0;
+        margin-left: auto;
+    }
+    .cw__cl__bnr__ttl p{
+        width: 150px;
+        padding-bottom: 150px;
+    }
+    .sw__art{
+        display: block;
+    }
+    .sw__art__item{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .aw__list ul{
+        display: block;
+    }
+    .aw__list ul li{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

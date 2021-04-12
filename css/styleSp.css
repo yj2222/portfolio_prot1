@@ -1,0 +1,98 @@
+@media screen and (max-width: 500px) {
+    h1{
+        font-size: 30px;
+    }
+    h1 span{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .prof{
+        display: block;
+        padding: 50px 5%;
+    }
+    .prof__ttl{
+        margin-bottom: 20px;
+    }
+    .prof__ttl span{
+        font-size: 50px;
+    }
+    .prof__pic{
+        width: 80%;
+        padding-bottom: 80%;
+        margin-bottom: 20px;
+    }
+    .prof__grf{
+        width: 100%;
+    }
+    .prof__grf figcaption p span{
+        line-height: 50px;
+    }
+    .prof__rate{
+        padding: 20px 0;
+    }
+    .prof__rate p{
+        width: 70px;
+    }
+    .prof__rate p span{
+        font-size: 50px;
+    }
+    .cw__cl{
+        padding: 50px 5%;
+    }
+    .cw__cl__ttl{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .cw__cl__ttl p{
+        margin-bottom: 50px;
+    }
+    .cw__cl__ttl h3{
+        text-align: right;
+    }
+    .cw__cl__mock{
+        margin-bottom: 50px;
+    }
+    .cw__cl__desc__txt p:first-of-type{
+        font-size: 30px;
+    }
+    .cw__cl__bnr__ttl{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .cw__cl__bnr__ttl p{
+        margin-bottom: 50px;
+    }
+    .cw__cl__bnr__ttl h4{
+        text-align: right;
+    }
+    .cw__cl__bnr__ttl h4 span{
+        font-size: 50px;
+    }
+    .cw__cl__bnr__img.pc{
+        display: none;
+    }
+    /* client works WV banner image(SP)
+    ------------------------------------------------ */
+    .cw__cl__bnr__img.sp{
+        display: block;
+        text-align: center;
+    }
+    .cw__cl__bnr__img.sp p span{
+        display: block;
+        color: white;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .cw__cl__bnr__img.sp p:nth-of-type(odd){
+        margin-bottom: 20px;
+    }
+    .cw__cl__bnr__img.sp svg{
+        width: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .cw__cl__bnr__img.sp p:nth-of-type(even){
+        margin-bottom: 50px;
+    }
+}

@@ -1,6 +1,3 @@
-svg.arrow{
-    width: 100px;
-}
 .arrow .cls-1,.arrow .cls-2{
     fill: none;
     stroke: var(--accent-color);
